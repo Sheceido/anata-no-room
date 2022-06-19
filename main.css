@@ -1,0 +1,170 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body
+{
+    overflow: hidden;
+    position: relative;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+ul {
+    padding-left: 50px;
+}
+
+.webgl
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+}
+
+.loadingBar {
+    background: #E6CFFF;
+    position: fixed;
+    top: 50%;
+    width: 50%;
+    height: 2px;
+    transform: scaleX(0.0);
+    transition: transform 0.5s;
+}
+.loadingText {
+    color: #E6CFFF;
+    position: fixed;
+    top: 55%;
+    font-size: 1.5rem;
+}
+.startBtn {
+    display: none;
+    position: fixed;
+    top: 45%;
+    /* display: none; */
+    font-size: 2.5rem;
+    padding: 2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    background-color: hsla(350, 100%, 90%, 1.0);
+}
+.startBtn:hover {
+    background-color: hsla(350, 100%, 80%, 1.0);
+}
+
+.point {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+}
+
+.point .label {
+    z-index: 1000;
+    position: fixed;
+    width: 40px;
+    top: -20px;
+    border-radius: 50%;
+    background: hsla(0, 0%, 0%, 0.50);
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    font-weight: 100;
+    font-size: 14px;
+    cursor: help;
+    transform: scale(0);
+    transition: transform 0.3s;
+}
+.point:hover .text {
+    opacity: 1.0;
+}
+.point.visible .label {
+    transform: scale(1);
+}
+
+.point .text {
+    position: fixed;
+    top: 30px;
+    left: -100px;
+    width: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    background: hsla(0, 0%, 0%, 0.50);
+    color: white;
+    line-height: 2em;
+    text-align: center;
+    font-weight: 100;
+    font-size: 14px;
+    transition: opacity 0.3s;
+    opacity: 0.0;
+    pointer-events: none;
+}
+
+.howTo {
+    z-index: 9999;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    color: white;
+    padding: 5px 15px;
+    background:hsl(220, 100%, 80%);
+    border-radius: 50%;
+    text-align: center;
+    cursor: zoom-in;
+    user-select: none;
+}
+.howTo:hover {
+    background:hsl(220, 100%, 60%);
+}
+
+.modal {
+    z-index: 9998;
+    position: fixed;
+    top: 30%;
+    color: white;
+    padding: 20px;
+    background: rgba(0, 4, 108, 0.60);
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    text-align: left;
+    cursor: zoom-out;
+    user-select: none;
+}
+.modalContainer {
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.modalContainer.visible {
+    display: flex;
+}
+
+.anyaSmile {
+    font-family: 'Noto Sans Egyptian Hieroglyphs', sans-serif;
+    font-size: 25px;
+}
+
+footer {
+    z-index: 9999;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: auto;
+    color: white;
+    background-color:hsla(0, 0%, 0%, 0.50);
+    backdrop-filter: blur(5px);
+    border-top: 1px solid hsl(220, 100%, 80%);
+    text-align: center;
+    padding-block: 1rem;
+    user-select: none;
+    cursor: pointer;
+    transform: translateY(88%);
+    transition: transform 0.5s ease-in-out;
+}
+.openFooter {
+    transform: translateY(0%);
+}
+
+/*# sourceMappingURL=main.css.map*/
